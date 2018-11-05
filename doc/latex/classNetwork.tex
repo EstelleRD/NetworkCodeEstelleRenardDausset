@@ -1,0 +1,152 @@
+\hypertarget{classNetwork}{}\section{Network Class Reference}
+\label{classNetwork}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$network.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}{Network}} ()
+\item 
+void \mbox{\hyperlink{classNetwork_a8f0092f24eaab8c8ab07745743b4ce8b}{resize}} (const size\+\_\+t \&)
+\item 
+bool \mbox{\hyperlink{classNetwork_a2bc02af56e866adf0c55a2c49885551a}{add\+\_\+link}} (const size\+\_\+t \&, const size\+\_\+t \&)
+\item 
+size\+\_\+t \mbox{\hyperlink{classNetwork_aab69fcd3971532b165c4a4ff7df4b81c}{random\+\_\+connect}} (const double \&)
+\item 
+size\+\_\+t \mbox{\hyperlink{classNetwork_aee0b1927ab5693cf90a00fe4d505c427}{set\+\_\+values}} (const std\+::vector$<$ double $>$ \&)
+\item 
+size\+\_\+t \mbox{\hyperlink{classNetwork_a41c54d12d861883170b5c5abca3a7bc8}{size}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{classNetwork_a7bd299baab15f2652fa697b1afde3977}{degree}} (const size\+\_\+t \&\+\_\+n) const
+\item 
+double \mbox{\hyperlink{classNetwork_a9b9cb94c0af24ce5417d840727fb5ad3}{value}} (const size\+\_\+t \&\+\_\+n) const
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classNetwork_a07ae19f51e2440a711ced30b1f371197}{sorted\+\_\+values}} () const
+\item 
+std\+::vector$<$ size\+\_\+t $>$ \mbox{\hyperlink{classNetwork_af57d8903e88666b66fd3cc3b8de143da}{neighbors}} (const size\+\_\+t \&) const
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classNetwork_ab4062dd3b2fc7825f21a686d76e3c696}{values}}
+\item 
+std\+::multimap$<$ size\+\_\+t, size\+\_\+t $>$ \mbox{\hyperlink{classNetwork_a1b5fbd7815319e330841dbd961d9f8cc}{links}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a network of nodes with bidirectional links\+: if {\bfseries (a, b)} is a link then {\bfseries (b, a)} is also a link.
+
+Each node supports a {\itshape double} value, and the list of nodes is in fact defined by the list of their values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}\label{classNetwork_a3cc2fb4f8fa4d507077e8da85ce5a1c8}} 
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection{\texorpdfstring{Network()}{Network()}}
+{\footnotesize\ttfamily Network\+::\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+\begin{DoxyCode}
+13 \{\}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classNetwork_a2bc02af56e866adf0c55a2c49885551a}\label{classNetwork_a2bc02af56e866adf0c55a2c49885551a}} 
+\index{Network@{Network}!add\+\_\+link@{add\+\_\+link}}
+\index{add\+\_\+link@{add\+\_\+link}!Network@{Network}}
+\subsubsection{\texorpdfstring{add\+\_\+link()}{add\_link()}}
+{\footnotesize\ttfamily bool Network\+::add\+\_\+link (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{,  }\item[{const size\+\_\+t \&}]{ }\end{DoxyParamCaption})}
+
+Adds a bidirectional link between two nodes 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a,b} & the indexes if the two nodes \\
+\hline
+\mbox{\tt out}  & {\em success} & the link was succesfully inserted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetwork_a7bd299baab15f2652fa697b1afde3977}\label{classNetwork_a7bd299baab15f2652fa697b1afde3977}} 
+\index{Network@{Network}!degree@{degree}}
+\index{degree@{degree}!Network@{Network}}
+\subsubsection{\texorpdfstring{degree()}{degree()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::degree (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{\+\_\+n }\end{DoxyParamCaption}) const}
+
+Degree (number of links) of node no {\itshape n} \mbox{\Hypertarget{classNetwork_af57d8903e88666b66fd3cc3b8de143da}\label{classNetwork_af57d8903e88666b66fd3cc3b8de143da}} 
+\index{Network@{Network}!neighbors@{neighbors}}
+\index{neighbors@{neighbors}!Network@{Network}}
+\subsubsection{\texorpdfstring{neighbors()}{neighbors()}}
+{\footnotesize\ttfamily std\+::vector$<$size\+\_\+t$>$ Network\+::neighbors (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{ }\end{DoxyParamCaption}) const}
+
+All neighbors (linked) nodes of node no {\itshape n} \mbox{\Hypertarget{classNetwork_aab69fcd3971532b165c4a4ff7df4b81c}\label{classNetwork_aab69fcd3971532b165c4a4ff7df4b81c}} 
+\index{Network@{Network}!random\+\_\+connect@{random\+\_\+connect}}
+\index{random\+\_\+connect@{random\+\_\+connect}!Network@{Network}}
+\subsubsection{\texorpdfstring{random\+\_\+connect()}{random\_connect()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::random\+\_\+connect (\begin{DoxyParamCaption}\item[{const double \&}]{ }\end{DoxyParamCaption})}
+
+Creates random connections between nodes\+: each node {\itshape n} will be linked with {\itshape degree(n)} other nodes (randomly chosen) where {\itshape degree(n)} is Poisson-\/distributed.
+
+All previous links are cleared first. 
+\begin{DoxyParams}{Parameters}
+{\em mean\+\_\+deg} & the average of the Poisson distribution. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetwork_a8f0092f24eaab8c8ab07745743b4ce8b}\label{classNetwork_a8f0092f24eaab8c8ab07745743b4ce8b}} 
+\index{Network@{Network}!resize@{resize}}
+\index{resize@{resize}!Network@{Network}}
+\subsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void Network\+::resize (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{ }\end{DoxyParamCaption})}
+
+Resizes the list of nodes (\mbox{\hyperlink{classNetwork_ab4062dd3b2fc7825f21a686d76e3c696}{values}}) \mbox{\Hypertarget{classNetwork_aee0b1927ab5693cf90a00fe4d505c427}\label{classNetwork_aee0b1927ab5693cf90a00fe4d505c427}} 
+\index{Network@{Network}!set\+\_\+values@{set\+\_\+values}}
+\index{set\+\_\+values@{set\+\_\+values}!Network@{Network}}
+\subsubsection{\texorpdfstring{set\+\_\+values()}{set\_values()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::set\+\_\+values (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{ }\end{DoxyParamCaption})}
+
+Resets all node values. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em vector} & of new node values \\
+\hline
+\mbox{\tt out}  & {\em number} & of nodes succesfully reset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classNetwork_a41c54d12d861883170b5c5abca3a7bc8}\label{classNetwork_a41c54d12d861883170b5c5abca3a7bc8}} 
+\index{Network@{Network}!size@{size}}
+\index{size@{size}!Network@{Network}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Network\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Number of nodes \mbox{\Hypertarget{classNetwork_a07ae19f51e2440a711ced30b1f371197}\label{classNetwork_a07ae19f51e2440a711ced30b1f371197}} 
+\index{Network@{Network}!sorted\+\_\+values@{sorted\+\_\+values}}
+\index{sorted\+\_\+values@{sorted\+\_\+values}!Network@{Network}}
+\subsubsection{\texorpdfstring{sorted\+\_\+values()}{sorted\_values()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Network\+::sorted\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+All node values in descending order \mbox{\Hypertarget{classNetwork_a9b9cb94c0af24ce5417d840727fb5ad3}\label{classNetwork_a9b9cb94c0af24ce5417d840727fb5ad3}} 
+\index{Network@{Network}!value@{value}}
+\index{value@{value}!Network@{Network}}
+\subsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily double Network\+::value (\begin{DoxyParamCaption}\item[{const size\+\_\+t \&}]{\+\_\+n }\end{DoxyParamCaption}) const}
+
+Value of node no {\itshape n} 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classNetwork_a1b5fbd7815319e330841dbd961d9f8cc}\label{classNetwork_a1b5fbd7815319e330841dbd961d9f8cc}} 
+\index{Network@{Network}!links@{links}}
+\index{links@{links}!Network@{Network}}
+\subsubsection{\texorpdfstring{links}{links}}
+{\footnotesize\ttfamily std\+::multimap$<$size\+\_\+t, size\+\_\+t$>$ Network\+::links\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classNetwork_ab4062dd3b2fc7825f21a686d76e3c696}\label{classNetwork_ab4062dd3b2fc7825f21a686d76e3c696}} 
+\index{Network@{Network}!values@{values}}
+\index{values@{values}!Network@{Network}}
+\subsubsection{\texorpdfstring{values}{values}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Network\+::values\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/\+Estelle/\+Documents/\+Network\+Code/src/\mbox{\hyperlink{network_8h}{network.\+h}}\end{DoxyCompactItemize}

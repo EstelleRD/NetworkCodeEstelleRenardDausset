@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Estelle/Documents/NetworkCode/src/network.cpp
+network.h
+/Users/Estelle/Documents/NetworkCode/src/network.h
+random.h
+/Users/Estelle/Documents/NetworkCode/src/random.h
+iostream
+-
+
+/Users/Estelle/Documents/NetworkCode/src/network.h
+map
+-
+vector
+-
+
+/Users/Estelle/Documents/NetworkCode/src/random.h
+random
+-
+vector
+-
+algorithm
+-
+
